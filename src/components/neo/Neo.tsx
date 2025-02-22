@@ -12,7 +12,10 @@ const Neo: React.FC = () => {
     fetchNeo();
   }, []);
 
-  if (!asteroids) return <p>Loading...</p>;
+  if (!asteroids)
+    return (
+      <p className="text-center text-blue-400">Loading asteroids data...</p>
+    );
 
   return (
     <div>

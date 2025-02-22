@@ -9,6 +9,7 @@ import Apod from "./components/apod/apod";
 import SpaceWeather from "./components/spaceweather/SpaceWeather";
 import Exoplanets from "./components/exoplanet/Exoplanet";
 import { Satellites } from "./components/satelites/Satelites";
+import { NasaGallery } from "./components/gallery/gallery";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -37,19 +38,19 @@ const App: React.FC = () => {
                 to="/"
                 className="text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
               >
-                APOD
+                🌌 APOD
               </Link>
               <Link
                 to="/neo"
                 className="text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
               >
-                Asteroids
+                🪨 Asteroids
               </Link>
               <Link
                 to="/mars"
                 className="text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
               >
-                Mars Rover
+                🔴 Mars Rover
               </Link>
               <Link
                 to="/space-weather"
@@ -68,6 +69,12 @@ const App: React.FC = () => {
                 className="text-lg font-semibold text-gray-300 hover:text-purple-400 transition duration-300"
               >
                 🛰️ Satellites
+              </Link>
+              <Link
+                to="/gallery"
+                className="text-lg font-semibold text-gray-300 hover:text-purple-400 transition duration-300"
+              >
+                📷 Gallery
               </Link>
             </div>
 
@@ -88,21 +95,21 @@ const App: React.FC = () => {
                 className="block text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                APOD
+                🌌 APOD
               </Link>
               <Link
                 to="/neo"
                 className="block text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Asteroids
+                🪨 Asteroids
               </Link>
               <Link
                 to="/mars"
                 className="block text-lg font-semibold text-gray-300 hover:text-blue-400 transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Mars Rover
+                🔴 Mars Rover
               </Link>
               <Link
                 to="/space-weather"
@@ -125,6 +132,13 @@ const App: React.FC = () => {
               >
                 🛰️ Satellites
               </Link>
+              <Link
+                to="/gallery"
+                className="block text-lg font-semibold text-gray-300 hover:text-purple-400 transition duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                📷 Gallery
+              </Link>
             </div>
           )}
         </nav>
@@ -138,6 +152,7 @@ const App: React.FC = () => {
             <Route path="/space-weather" element={<SpaceWeather />} />
             <Route path="/exoplanets" element={<Exoplanets />} />
             <Route path="/satellites" element={<Satellites />} />
+            <Route path="/gallery" element={<NasaGallery />} />
           </Routes>
         </div>
       </div>

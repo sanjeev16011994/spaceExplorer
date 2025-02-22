@@ -17,9 +17,10 @@ export const Satellites = () => {
     fetchSatellites();
   }, []);
 
-  return loading ? (
-    <p>Loading...</p>
-  ) : (
+  if (loading)
+    return <p className="text-center text-blue-400">Loading satelite data...</p>;
+
+  return (
     <div>
       <h2>🛰️ Satellite Tracking</h2>
       {satellites.map((sat, index) => (

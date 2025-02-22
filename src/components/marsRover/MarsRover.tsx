@@ -12,7 +12,10 @@ const MarsRover: React.FC = () => {
     fetchPhotos();
   }, []);
 
-  if (!photos) return <p>Loading...</p>;
+  if (!photos)
+    return (
+      <p className="text-center text-blue-400">Loading mars data...</p>
+    );
 
   return (
     <div>
