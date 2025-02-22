@@ -8,6 +8,7 @@ import Loader from "./components/loader/Loader";
 import Apod from "./components/apod/apod";
 import SpaceWeather from "./components/spaceweather/SpaceWeather";
 import Exoplanets from "./components/exoplanet/Exoplanet";
+import { Satellites } from "./components/satelites/Satelites";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -68,18 +69,6 @@ const App: React.FC = () => {
               >
                 🛰️ Satellites
               </Link>
-              <Link
-                to="/earth-data"
-                className="text-lg font-semibold text-gray-300 hover:text-blue-300 transition duration-300"
-              >
-                🌍 Earth Data
-              </Link>
-              <Link
-                to="/nasa-tech"
-                className="text-lg font-semibold text-gray-300 hover:text-red-400 transition duration-300"
-              >
-                🛠️ NASA Tech
-              </Link>
             </div>
 
             {/* 📱 Mobile Menu Button */}
@@ -136,20 +125,6 @@ const App: React.FC = () => {
               >
                 🛰️ Satellites
               </Link>
-              <Link
-                to="/earth-data"
-                className="block text-lg font-semibold text-gray-300 hover:text-blue-300 transition duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                🌍 Earth Data
-              </Link>
-              <Link
-                to="/nasa-tech"
-                className="block text-lg font-semibold text-gray-300 hover:text-red-400 transition duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                🛠️ NASA Tech
-              </Link>
             </div>
           )}
         </nav>
@@ -162,9 +137,7 @@ const App: React.FC = () => {
             <Route path="/mars" element={<MarsRover />} />
             <Route path="/space-weather" element={<SpaceWeather />} />
             <Route path="/exoplanets" element={<Exoplanets />} />
-            {/* <Route path="/satellites" element={<Satellites />} />
-            <Route path="/earth-data" element={<EarthData />} />
-            <Route path="/nasa-tech" element={<NasaTech />} /> */}
+            <Route path="/satellites" element={<Satellites />} />
           </Routes>
         </div>
       </div>
